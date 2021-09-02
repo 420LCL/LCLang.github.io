@@ -1,11 +1,14 @@
-extends views/main.pug
+extends includes/layout.pug
 
-block head
-  title
-    = page.tag + ' - ' + config.title
-
-block main
-  include mixins/post.pug
-  -page.posts.each(function(post) {
-    +post(post, 'archive')
-  -})
+block content
+  if theme.tag_ui == 'index'
+    include ./includes/mixins/post-ui.pug
+    #recent-posts.recent-posts
+      +postUI
+      include includes/pagination.pug
+  else
+    include ./includes/mixins/article-sort.pug
+    #tag
+      .article-sort-title= _p('page.tag') + ' - ' + page.tag
+      +articleSort(page.posts)
+      include includes/pagination.pug

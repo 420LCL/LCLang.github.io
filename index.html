@@ -1,5 +1,7 @@
-extends views/index
+extends includes/layout.pug
 
-block head
-  title
-    = config.title
+block content
+  include ./includes/mixins/post-ui.pug
+  #recent-posts.recent-posts
+    +postUI
+    include includes/pagination.pug

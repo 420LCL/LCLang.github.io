@@ -1,20 +1,14 @@
-extends views/main.pug
+extends includes/layout.pug
 
-block head
-  title
-    = config.title
-
-block main
-  include mixins/post.pug
-  -var time
-  -site.posts.sort('date', 'desc').each(function(post) {
-    -var year = post.date.year()
-    -if (time != year) {
-      -if (time) {
-        h2.archive-title
-          = year
-      -}
-      -time = year
-    -}
-    +post(post, 'archive')
-  -})
+block content
+  if theme.category_ui == 'index'
+    include ./includes/mixins/post-ui.pug
+    #recent-posts.recent-posts.category_ui
+      +postUI
+      include includes/pagination.pug
+  else
+    include ./includes/mixins/article-sort.pug
+    #category
+      .article-sort-title= _p('page.category') + ' - ' + page.category
+      +articleSort(page.posts)
+      include includes/pagination.pug

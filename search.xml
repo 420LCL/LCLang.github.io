@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>My awesome title</title>
+    <url>/lclang/2021/09/02/hell0/</url>
+    <content><![CDATA[<p>```</p>
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>生活</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>欢迎来到LCL的blog</title>
+    <url>/lclang/2021/09/02/hello-world/</url>
+    <content><![CDATA[<p>Welcome to [LCLangBlog]</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/lclang/2021/09/02/%E5%88%9D%E8%A7%81/</url>
+    <content><![CDATA[<h2 id="欢迎来到LCL的个人博客"><a href="#欢迎来到LCL的个人博客" class="headerlink" title="欢迎来到LCL的个人博客"></a>欢迎来到LCL的个人博客</h2><p>今天刚刚弄好博客，主要用来记录前端的学习笔记。</p>
+]]></content>
+  </entry>
+</search>
